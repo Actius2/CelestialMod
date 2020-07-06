@@ -10,7 +10,7 @@ namespace CelestialMod.Items.Vanity.Paladin
 	{
 		public override void SetStaticDefaults() {
 			DisplayName.SetDefault("Lawlyi's Leggings");
-			Tooltip.SetDefault('Great for impersonating mod devs!');
+			Tooltip.SetDefault("Great for impersonating mod devs!");
 		}
 
 		public override void SetDefaults() {
