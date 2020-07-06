@@ -1,0 +1,11 @@
+author = Actius
+version = 0.001
+displayName = Celestial Mod
+homepage = 
+modReferences = BaseMod, SubworldLibrary
+buildIgnore = .sln, .csproj, .user, bin/, obj/, Properties, .gitattributes, .gitignore, .git/, .vs/, changelog.txt, README.MD
+
+includeResources = false
+includeCode = true
+includeSource = true
+includePDB = true
