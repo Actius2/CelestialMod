@@ -2,6 +2,7 @@ using CelestialMod.Tiles;
 using Terraria;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
+using Terraria.ID;
 
 namespace CelestialMod.Items.Vanity.Paladin
 {
@@ -17,7 +18,7 @@ namespace CelestialMod.Items.Vanity.Paladin
 			item.width = 18;
 			item.height = 18;
 			item.value = 50000;
-			item.rare = 9;
+			item.rare = ItemRarityID.Cyan;
 			item.defense = 0;
 			item.vanity = true;
 		}

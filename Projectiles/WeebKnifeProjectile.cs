@@ -1,6 +1,5 @@
-using System;
 using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
+using System;
 using Terraria;
 using Terraria.Graphics.Shaders;
 using Terraria.ID;
@@ -50,7 +49,7 @@ namespace CelestialMod.Projectiles
 
 		public override void Kill(int timeLeft)
 		{
-			Main.PlaySound(3, (int)projectile.position.X, (int)projectile.position.Y, 7);
+			Main.PlaySound(SoundID.NPCHit, (int)projectile.position.X, (int)projectile.position.Y, 7);
 			
 				Dust dust = Dust.NewDustDirect(projectile.position, projectile.height, projectile.width, 6, projectile.velocity.X * .2f, projectile.velocity.Y * .2f, 33, new Color(0,0,0), 1f);
 				dust.noGravity = true;

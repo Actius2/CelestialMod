@@ -19,9 +19,9 @@ namespace CelestialMod.WorldGeneration
     public class CrimsonSeptetteDelete : MicroBiome
     {
 
-        Texture2D CrimsonSeptetteBegin = null;
+         Texture2D CrimsonSeptetteBegin = null;
 
-        Texture2D CrimsonSeptetteWalls = null;
+         Texture2D CrimsonSeptetteWalls = null;
 
         public override bool Place(Point origin, StructureMap structures)
         {

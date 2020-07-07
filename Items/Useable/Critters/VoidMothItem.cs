@@ -18,10 +18,10 @@ namespace CelestialMod.Items.Useable.Critters
         {
             item.width = 24;
 			item.height = 22;
-            item.rare = 3;
+            item.rare = ItemRarityID.Orange;
             item.maxStack = 99;
             item.noUseGraphic = true;
-            item.useStyle = 1;
+            item.useStyle = ItemUseStyleID.SwingThrow;
 			item.value = Terraria.Item.sellPrice(0, 10, 0, 0);
             item.useTime = item.useAnimation = 20;
 			item.bait = 50;

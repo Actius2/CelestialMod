@@ -1,11 +1,7 @@
+using CelestialMod.Players;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
-using System;
-using System.Linq;
-using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
-using System.Collections.Generic;
 
 namespace CelestialMod.NPCs.Critters
 {

@@ -33,7 +33,7 @@ namespace CelestialMod
 			item.width = 34;
 			item.height = 38;
 			item.rare = 12;
-			item.useStyle = 4;
+			item.useStyle = ItemUseStyleID.HoldingUp;
 			item.useTime = 30;
 			item.useAnimation = 30;
 			item.UseSound = SoundID.Item1;

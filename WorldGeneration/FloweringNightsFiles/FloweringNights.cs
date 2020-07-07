@@ -12,9 +12,8 @@ namespace CelestialMod.WorldGeneration
     public class FloweringNightsDelete : MicroBiome
     {
 
-        Texture2D FloweringNightsBegin = null;
-
-        Texture2D FloweringNightsWalls = null;
+         Texture2D FloweringNightsBegin = null;
+         Texture2D FloweringNightsWalls = null;
 
         public override bool Place(Point origin, StructureMap structures)
         {

@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
+using Terraria.ID;
 
 namespace CelestialMod.Tiles.Ambient.VoidGrass
 {
@@ -20,7 +21,7 @@ namespace CelestialMod.Tiles.Ambient.VoidGrass
 			TileObjectData.newTile.DrawYOffset = 2;
 			TileObjectData.addTile(Type);
 			dustType = 2;
-			soundType = 6;
+			soundType = SoundID.Grass;
 		}
 
 		public override void NumDust(int i, int j, bool fail, ref int num)

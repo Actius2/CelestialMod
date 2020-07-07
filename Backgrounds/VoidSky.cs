@@ -1,13 +1,11 @@
-using System;
+using CelestialMod.Players;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using System;
 using Terraria;
-using Terraria.Graphics;
 using Terraria.Graphics.Effects;
-using Terraria.Utilities;
-using Terraria.ModLoader;
 using Terraria.Graphics.Shaders;
-using CelestialMod.Backgrounds;
+using Terraria.Utilities;
 
 namespace CelestialMod.Backgrounds
 {
@@ -171,7 +169,7 @@ namespace CelestialMod.Backgrounds
 
         private void UpdateVoidSky()
         {
-            if (Main.LocalPlayer.GetModPlayer<CelestialModPlayer>().ZoneVoid)
+            if (CelestialModPlayer.Get().ZoneVoid)
             {
                 return;
             }

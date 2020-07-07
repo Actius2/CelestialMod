@@ -48,7 +48,7 @@ namespace CelestialMod.NPCs
 			{
 				npc.timeLeft = 300;
 			}
-			if (Main.netMode != 1)
+			if (Main.netMode != NetmodeID.MultiplayerClient)
 			{
 				if (!tail && npc.ai[0] == 0f)
 				{
@@ -85,9 +85,9 @@ namespace CelestialMod.NPCs
 					npc.HitEffect(0, 10.0);
 					npc.active = false;
 				}
-				if (!npc.active && Main.netMode == 2)
+				if (!npc.active && Main.netMode == NetmodeID.Server)
 				{
-					NetMessage.SendData(28, -1, -1, null, npc.whoAmI, -1f, 0f, 0f, 0, 0, 0);
+					NetMessage.SendData(MessageID.StrikeNPC, -1, -1, null, npc.whoAmI, -1f, 0f, 0f, 0, 0, 0);
 				}
 			}
 			int num180 = (int)(npc.position.X / 16f) - 1;
@@ -129,7 +129,7 @@ namespace CelestialMod.NPCs
 								{
 									WorldGen.KillTile(num184, num185, true, true, false);
 								}
-								if (Main.netMode != 1 && Main.tile[num184, num185].type == 2)
+								if (Main.netMode != NetmodeID.MultiplayerClient && Main.tile[num184, num185].type == 2)
 								{
 									ushort arg_BFCA_0 = Main.tile[num184, num185 - 1].type;
 								}
@@ -293,7 +293,7 @@ namespace CelestialMod.NPCs
 						}
 						if (flag20)
 						{
-							if (Main.netMode != 1 && (double)(npc.position.Y / 16f) > (Main.rockLayer + (double)Main.maxTilesY) / 2.0)
+							if (Main.netMode != NetmodeID.MultiplayerClient && (double)(npc.position.Y / 16f) > (Main.rockLayer + (double)Main.maxTilesY) / 2.0)
 							{
 								npc.active = false;
 								int num200 = (int)npc.ai[0];
@@ -302,15 +302,15 @@ namespace CelestialMod.NPCs
 									int num201 = (int)Main.npc[num200].ai[0];
 									Main.npc[num200].active = false;
 									npc.life = 0;
-									if (Main.netMode == 2)
+									if (Main.netMode == NetmodeID.Server)
 									{
-										NetMessage.SendData(23, -1, -1, null, num200, 0f, 0f, 0f, 0, 0, 0);
+										NetMessage.SendData(MessageID.SyncNPC, -1, -1, null, num200, 0f, 0f, 0f, 0, 0, 0);
 									}
 									num200 = num201;
 								}
-								if (Main.netMode == 2)
+								if (Main.netMode == NetmodeID.Server)
 								{
-									NetMessage.SendData(23, -1, -1, null, npc.whoAmI, 0f, 0f, 0f, 0, 0, 0);
+									NetMessage.SendData(MessageID.SyncNPC, -1, -1, null, npc.whoAmI, 0f, 0f, 0f, 0, 0, 0);
 								}
 							}
 							num191 = 0f;
@@ -318,7 +318,7 @@ namespace CelestialMod.NPCs
 						}
 					}
 					bool flag21 = false;
-					if (npc.type == 87)
+					if (npc.type == NPCID.WyvernHead)
 					{
 						if (((npc.velocity.X > 0f && num191 < 0f) || (npc.velocity.X < 0f && num191 > 0f) || (npc.velocity.Y > 0f && num192 < 0f) || (npc.velocity.Y < 0f && num192 > 0f)) && System.Math.Abs(npc.velocity.X) + System.Math.Abs(npc.velocity.Y) > num189 / 2f && num193 < 300f)
 						{

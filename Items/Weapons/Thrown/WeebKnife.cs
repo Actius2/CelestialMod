@@ -16,7 +16,7 @@ namespace CelestialMod.Items.Weapons.Thrown
 
         public override void SetDefaults()
         {
-            item.useStyle = 1;
+            item.useStyle = ItemUseStyleID.SwingThrow;
             item.width = 34;
             item.height = 34;
             item.noUseGraphic = true;
@@ -33,7 +33,7 @@ namespace CelestialMod.Items.Weapons.Thrown
             item.knockBack = 10f;
 			item.value = Item.sellPrice(0, 7, 0, 0);
             item.crit = 16;
-            item.rare = 2;
+            item.rare = ItemRarityID.Green;
             item.autoReuse = true;
         }
     }

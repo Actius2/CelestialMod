@@ -60,7 +60,7 @@ namespace CelestialMod.NPCs.Bosses.CyberWorm
 		bool SpawnedDuringJim = false;
 		public override void CustomBehavior()
 		{
-			if (Main.netMode != 1)
+			if (Main.netMode != NetmodeID.MultiplayerClient)
 			{
 				if (attackCounter > 0)
 				{
