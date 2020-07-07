@@ -43,7 +43,7 @@ namespace CelestialMod
 			Player player = Main.LocalPlayer;
 			if (!player.active)
 				return;
-			CelestialModPlayer Gamer = CelestialModPlayer.get(player);
+			CelestialModPlayer Gamer = CelestialModPlayer.Get(player);
 			
 			if (Gamer.ZoneVoid)
 			{

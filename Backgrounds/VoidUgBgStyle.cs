@@ -7,7 +7,7 @@ namespace CelestialMod.Backgrounds
 	{
 		public override bool ChooseBgStyle() {
 			
-			return CelestialModPlayer.Get().ZoneVoid;
+			return CelestialModPlayer.get().ZoneVoid;
 		}
 
 		public override void FillTextureArray(int[] textureSlots) {
