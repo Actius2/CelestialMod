@@ -1,18 +1,14 @@
-using System.Collections.Generic;
-using System;
-using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
-using Terraria;
-using Terraria.Graphics;
-using Terraria.Graphics.Effects;
-using Terraria.Utilities;
-using Terraria.ModLoader;
-using Terraria.Graphics.Shaders;
 using CelestialMod.Backgrounds;
+using CelestialMod.Players;
+using Microsoft.Xna.Framework.Graphics;
+using System.Collections.Generic;
+using Terraria;
+using Terraria.Graphics.Effects;
+using Terraria.ModLoader;
 
 namespace CelestialMod
 {
-    public class CelestialMod : Mod
+	public class CelestialMod : Mod
 	{
 		internal static CelestialMod instance;
         public static CelestialMod self = null;
@@ -47,7 +43,7 @@ namespace CelestialMod
 			Player player = Main.LocalPlayer;
 			if (!player.active)
 				return;
-			CelestialModPlayer Gamer = player.GetModPlayer<CelestialModPlayer>();
+			CelestialModPlayer Gamer = CelestialModPlayer.Get(player);
 			
 			if (Gamer.ZoneVoid)
 			{

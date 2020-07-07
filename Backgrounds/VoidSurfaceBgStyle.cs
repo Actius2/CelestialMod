@@ -1,3 +1,4 @@
+using CelestialMod.Players;
 using Terraria;
 using Terraria.ModLoader;
 
@@ -6,7 +7,7 @@ namespace CelestialMod.Backgrounds
 	public class VoidSurfaceBgStyle : ModSurfaceBgStyle
 	{
 		public override bool ChooseBgStyle() {
-			return !Main.gameMenu && Main.LocalPlayer.GetModPlayer<CelestialModPlayer>().ZoneVoid;
+			return !Main.gameMenu && CelestialModPlayer.Get().ZoneVoid;
 		}
 
 		// Use this to keep far Backgrounds like the mountains.
