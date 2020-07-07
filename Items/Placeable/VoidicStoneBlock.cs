@@ -10,7 +10,7 @@ namespace CelestialMod.Items.Placeable
 	public class VoidicStoneBlock : ModItem
 	{
 		public override void SetStaticDefaults() {
-			Tooltip.SetDefault("This is a modded block.");
+			DisplayName.SetDefault("GloomStone Block");
 
 		}
 

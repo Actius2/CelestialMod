@@ -15,6 +15,7 @@ namespace CelestialMod.Tiles.Blocks
 		public override void SetDefaults() {
 			Main.tileSolid[Type] = true;
 			Main.tileMergeDirt[Type] = true;
+			soundType = SoundID.Tink;
 			Main.tileBlockLight[Type] = true;
 			Main.tileLighted[Type] = false;
 			Main.tileMerge[Type][mod.TileType("VoidicMud")] = true;

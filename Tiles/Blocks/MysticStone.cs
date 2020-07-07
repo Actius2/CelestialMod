@@ -16,6 +16,7 @@ namespace CelestialMod.Tiles.Blocks
 			Main.tileSolid[Type] = true;
 			Main.tileMergeDirt[Type] = true;
 			Main.tileBlockLight[Type] = true;
+			soundType = SoundID.Tink;
 			Main.tileLighted[Type] = false;
 			Main.tileMerge[Type][mod.TileType("MysticSoil")] = true;
 			Main.tileMerge[Type][mod.TileType("MysticGrass")] = true;

@@ -10,7 +10,7 @@ namespace CelestialMod.Items.Placeable
 	public class VoidicMudBlock : ModItem
 	{
 		public override void SetStaticDefaults() {
-			Tooltip.SetDefault("This is a modded block.");
+			DisplayName.SetDefault("Sludge Block");
 
 		}
 
