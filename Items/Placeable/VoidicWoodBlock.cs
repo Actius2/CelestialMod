@@ -9,10 +9,10 @@ namespace CelestialMod.Items.Placeable
 {
 	public class VoidicWoodBlock : ModItem
 	{
-		public override void SetStaticDefaults() {
-			Tooltip.SetDefault("This is a modded block.");
-
-		}
+		 public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Gloomwood");
+        }
 
 		public override void SetDefaults() {
 			item.width = 12;

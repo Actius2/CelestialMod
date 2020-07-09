@@ -9,7 +9,7 @@ namespace CelestialMod.NPCs.Critters
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Void Moth");
+			DisplayName.SetDefault("Acidic Moth");
 			Main.npcFrameCount[npc.type] = 3;
 		}
 

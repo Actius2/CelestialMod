@@ -10,7 +10,7 @@ namespace CelestialMod.Items.Useable.Critters
     {
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Void Moth");
+			DisplayName.SetDefault("Acidic Moth");
 		}
 
 

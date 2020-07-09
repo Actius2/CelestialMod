@@ -2,9 +2,9 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.ModLoader;
 
-namespace CelestialMod.Walls
+namespace CelestialMod.Walls.GloomBiome
 {
-    public class VoidicSoilWall : ModWall
+    public class GloomWoodWallTile : ModWall
     {
         public override void SetDefaults()
         {

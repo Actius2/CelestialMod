@@ -10,7 +10,7 @@ namespace CelestialMod.Items.Placeable
 	public class VoidicStoneBlock : ModItem
 	{
 		public override void SetStaticDefaults() {
-			DisplayName.SetDefault("GloomStone Block");
+			DisplayName.SetDefault("Gloomstone Block");
 
 		}
 
