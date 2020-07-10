@@ -76,15 +76,16 @@ namespace CelestialMod
         public override void ModifyWorldGenTasks(List<GenPass> tasks, ref float totalWeight)
         {
             int shiniesIndex = tasks.FindIndex(genpass => genpass.Name.Equals("Shinies"));
+			int terrainIndex = tasks.FindIndex(genpass => genpass.Name.Equals("Jungle"));
             int shiniesIndex2 = tasks.FindIndex(genpass => genpass.Name.Equals("Final Cleanup"));
             
 			
-			tasks.Insert(shiniesIndex2, new PassLegacy("FloweringNights", delegate (GenerationProgress progress)
+			tasks.Insert(shiniesIndex, new PassLegacy("FloweringNights", delegate (GenerationProgress progress)
                 {
                     FloweringNights(progress);
                 }));
 			
-			tasks.Insert(shiniesIndex2, new PassLegacy("CrimsonSeptette", delegate (GenerationProgress progress)
+			tasks.Insert(terrainIndex, new PassLegacy("CrimsonSeptette", delegate (GenerationProgress progress)
                 {
                     CrimsonSeptette(progress);
                 }));
@@ -108,9 +109,9 @@ namespace CelestialMod
             delete.Place(origin, WorldGen.structures);
             biome.Place(origin, WorldGen.structures);
 		}
-		private void CrimsonSeptette(GenerationProgress progress)
+	   private void CrimsonSeptette(GenerationProgress progress)
         {
-            int q2 = (int)WorldGen.worldSurface;
+            int q2 = (int)WorldGen.worldSurface + 1;
             OvergrowthPos2.X = Main.maxTilesX * 0.50f;
             OvergrowthPos2.Y = q2;
             progress.Message = "TEXT HERE!2";

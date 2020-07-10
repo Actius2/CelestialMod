@@ -19,7 +19,7 @@ namespace CelestialMod.Tiles.Blocks
 			Main.tileLighted[Type] = false;
 			Main.tileMerge[Type][mod.TileType("MysticStone")] = true;
 			Main.tileMerge[Type][mod.TileType("MysticGrass")] = true;
-			Main.tileMergeDirt[Type] = true;
+			Main.tileBlendAll[Type] = true;
 			AddMapEntry(new Color(0, 191, 255));
 			drop = ItemType<Items.Placeable.MysticSoilBlock>();
 		}

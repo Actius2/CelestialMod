@@ -89,11 +89,16 @@ namespace CelestialMod.WorldGeneration
             colorToTile[new Color(0, 0, 255)] = mod.TileType("VoidicGrass");
             colorToTile[new Color(0, 255, 0)] = mod.TileType("VoidicStone");
 			colorToTile[new Color(0, 125, 0)] = mod.TileType("VoidicMud");
+			colorToTile[new Color(0, 191, 255)] = mod.TileType("CelestialRemnantsTempleTile");
+			colorToTile[new Color(127, 0, 55)] = mod.TileType("GloomWoodPlatform");
+			colorToTile[new Color(128, 128, 128)] = TileID.Spikes;
             colorToTile[new Color(255, 0, 0)] = -2; //turn into air
             colorToTile[Color.Black] = -1; //don't touch when genning		
 
             Dictionary<Color, int> colorToWall = new Dictionary<Color, int>();
             colorToWall[new Color(0, 0, 255)] = mod.WallType("VoidicSoilWall");
+			colorToWall[new Color(255, 0, 110)] = mod.WallType("CelestialRemnantsTempleWall");
+		
             colorToWall[new Color(255, 0, 0)] = -2;
             colorToWall[Color.Black] = -1; //don't touch when genning				
             
