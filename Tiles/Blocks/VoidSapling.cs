@@ -37,7 +37,6 @@ namespace CelestialMod.Tiles.Blocks
 			ModTranslation name = CreateMapEntryName();
 			name.SetDefault("Sapling");
 			AddMapEntry(new Color(200, 200, 200), name);
-			dustType = DustType<TemporalDust>();
 			adjTiles = new int[] { TileID.Saplings };
 		}
 
@@ -45,11 +44,6 @@ namespace CelestialMod.Tiles.Blocks
 		{
 			style = 0;
 			return mod.TileType("VoidSapling");
-		}
-		
-		public override void NumDust(int i, int j, bool fail, ref int num)
-		{
-			num = fail ? 1 : 3;
 		}
 
 		public override void RandomUpdate(int i, int j)

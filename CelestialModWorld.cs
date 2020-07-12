@@ -75,28 +75,72 @@ namespace CelestialMod
 
         public override void ModifyWorldGenTasks(List<GenPass> tasks, ref float totalWeight)
         {
-            int shiniesIndex = tasks.FindIndex(genpass => genpass.Name.Equals("Shinies"));
-			int terrainIndex = tasks.FindIndex(genpass => genpass.Name.Equals("Jungle"));
+            int gemsIndex = tasks.FindIndex(genpass => genpass.Name.Equals("Gems"));
+			int slushIndex = tasks.FindIndex(genpass => genpass.Name.Equals("Slush"));
+			int beachindex = tasks.FindIndex(genpass => genpass.Name.Equals("Beaches"));
             int shiniesIndex2 = tasks.FindIndex(genpass => genpass.Name.Equals("Final Cleanup"));
+			
             
 			
-			tasks.Insert(shiniesIndex, new PassLegacy("FloweringNights", delegate (GenerationProgress progress)
+			
+			
+			tasks.Insert(slushIndex, new PassLegacy("GroundCherry", delegate (GenerationProgress progress)
+                {
+                    GroundCherry(progress);
+                }));
+			
+			tasks.Insert(shiniesIndex2, new PassLegacy("FloweringNights", delegate (GenerationProgress progress)
                 {
                     FloweringNights(progress);
                 }));
-			
-			tasks.Insert(terrainIndex, new PassLegacy("CrimsonSeptette", delegate (GenerationProgress progress)
+		
+			tasks.Insert(gemsIndex, new PassLegacy("CrimsonSeptette", delegate (GenerationProgress progress)
                 {
                     CrimsonSeptette(progress);
                 }));
+				
+			tasks.Insert(gemsIndex +1, new PassLegacy("ImmortalSmoke", delegate (GenerationProgress progress)
+                {
+                    ImmortalSmoke(progress);
+                }));
+			
         }
+		
+		
+		
+                   
+					
+		private void GroundCherry(GenerationProgress progress)
+        {
+            int Y = (int)WorldGen.worldSurface;
+			int X = (int)(Main.maxTilesX * 0.50f);
+            progress.Message = "TEXT HERE!1";
+            GroundCherryBegin();
+        }
+		
+		private void GroundCherryBegin()
+        {
+					int Y = (int)WorldGen.worldSurface;
+					int X = (int)(Main.maxTilesX * 0.60f);
+                    double strength = 700;
+                    int steps = WorldGen.genRand.Next(200, 200);
+
+                    WorldGen.TileRunner(X, Y, strength, steps, ModContent.TileType<Tiles.Blocks.VoidicGrass>(), false, 0f, 0f, false, true);
+
+                    for (int i = 0; i < Main.rand.Next(65, 70); i++)
+                    {
+                        WorldGen.TileRunner(X + Main.rand.Next(-75, 75), Main.rand.Next(Y - 25, Y + 150), Main.rand.Next(6, 10), Main.rand.Next(10, 25), ModContent.TileType<Tiles.Blocks.VoidicStone>(), false, 0f, 0f, false, true);
+                    }
+					
+        }
+		
 
        private void FloweringNights(GenerationProgress progress)
         {
             int q1 = (int)WorldGen.rockLayer  - 10;
-            OvergrowthPos.X = Main.maxTilesX * 0.71f;
+            OvergrowthPos.X = Main.maxTilesX * 0.65f;
             OvergrowthPos.Y = q1;
-            progress.Message = "TEXT HERE!";
+            progress.Message = "TEXT HERE!2";
             FloweringNightsBegin();
         }
 
@@ -111,10 +155,10 @@ namespace CelestialMod
 		}
 	   private void CrimsonSeptette(GenerationProgress progress)
         {
-            int q2 = (int)WorldGen.worldSurface + 1;
-            OvergrowthPos2.X = Main.maxTilesX * 0.50f;
+            int q2 = (int)WorldGen.worldSurface - 10;
+            OvergrowthPos2.X = Main.maxTilesX * 0.55f;
             OvergrowthPos2.Y = q2;
-            progress.Message = "TEXT HERE!2";
+            progress.Message = "TEXT HERE!3";
             CrimsonSeptetteBegin();
         }
 
@@ -127,6 +171,16 @@ namespace CelestialMod
             delete.Place(origin, WorldGen.structures);
             biome.Place(origin, WorldGen.structures);
         }
+
+        private void ImmortalSmoke(GenerationProgress progress)
+        {
+            Point origin = new Point((int)(Main.maxTilesX * 055f), ((int)WorldGen.worldSurface - 10)); ;
+            progress.Message = "TEXT HERE!3";
+            ImmortalSmoke biome = new ImmortalSmoke();
+			biome.Place(origin, WorldGen.structures);
+        }
+
+ 
         
 		public override void NetSend(BinaryWriter writer)
         {

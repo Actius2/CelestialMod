@@ -31,7 +31,7 @@ namespace CelestialMod.Items.Placeable.Furniture.GloomWood2
             recipe.AddIngredient(ModContent.ItemType<Items.Placeable.VoidicWoodBlock>(), 1);
             //recipe.AddIngredient(ItemID.Torch, 3);
             recipe.AddTile(TileID.WorkBenches);
-            recipe.SetResult(this);
+            recipe.SetResult(this,3);
             recipe.AddRecipe();
         }
 	}

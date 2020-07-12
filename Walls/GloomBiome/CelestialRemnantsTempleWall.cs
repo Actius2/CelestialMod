@@ -8,9 +8,9 @@ namespace CelestialMod.Walls.GloomBiome
     {
         public override void SetDefaults()
         {
-            Main.wallHouse[Type] = false;
+            Main.wallHouse[Type] = true;
             AddMapEntry(new Color(79, 140, 36));
-            soundType = 6;
+            soundType = 21;
             dustType = 2;
         }
     }
