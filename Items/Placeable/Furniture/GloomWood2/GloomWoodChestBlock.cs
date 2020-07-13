@@ -28,7 +28,7 @@ namespace CelestialMod.Items.Placeable.Furniture.GloomWood2
         {
             ModRecipe recipe = new ModRecipe(mod);
             recipe.AddIngredient(ModContent.ItemType<VoidicWoodBlock>(), 4);
-			recipe.AddIngredient(6,2);
+			recipe.AddIngredient(ItemID.IronBar,2);
             recipe.AddTile(TileID.WorkBenches);
             recipe.SetResult(this);
             recipe.AddRecipe();

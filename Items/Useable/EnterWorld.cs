@@ -11,11 +11,11 @@ using Terraria.Graphics.Effects;
 using Terraria.Localization;
 using SubworldLibrary;
 using Terraria.World.Generation;
-using BaseMod;
+using CelestialMod;
 using CelestialMod.Tiles;
 using CelestialMod.Items;
-using CelestialMod;
 using static CelestialMod.CelestialModSubworld;
+
 namespace CelestialMod
 {
 	public class EnterWorld : ModItem

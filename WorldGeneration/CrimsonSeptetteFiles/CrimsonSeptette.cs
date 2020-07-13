@@ -11,7 +11,6 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.World.Generation;
 using Terraria.GameContent.Generation;
-using BaseMod;
 using CelestialMod.Tiles;
 
 namespace CelestialMod.WorldGeneration

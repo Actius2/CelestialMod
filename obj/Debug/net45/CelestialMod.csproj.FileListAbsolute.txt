@@ -1,3 +1,0 @@
-C:\Users\ethan\Documents\My Games\Terraria\ModLoader\Mod Sources\CelestialMod\obj\Debug\net45\CelestialMod.csprojAssemblyReference.cache
-C:\Users\ethan\Documents\My Games\Terraria\ModLoader\Mod Sources\CelestialMod\obj\Debug\net45\CelestialMod.csproj.CoreCompileInputs.cache
-C:\Users\ethan\Documents\My Games\Terraria\ModLoader\Mod Sources\CelestialMod\obj\Debug\net45\CelestialMod.AssemblyInfo.cs

@@ -4,7 +4,7 @@ using Terraria;
 using Terraria.ModLoader;
 using SubworldLibrary;
 using Terraria.World.Generation;
-using BaseMod;
+using CelestialMod;
 using CelestialMod.WorldGeneration;
 
 namespace CelestialMod

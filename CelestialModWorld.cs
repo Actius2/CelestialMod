@@ -11,7 +11,7 @@ using Terraria.GameContent.Generation;
 using Terraria.ModLoader.IO;
 using Terraria.DataStructures;
 using Microsoft.Xna.Framework.Graphics;
-using BaseMod;
+using CelestialMod;
 using CelestialMod.Tiles;
 using CelestialMod.WorldGeneration;
 using CelestialMod.Items;
@@ -98,11 +98,6 @@ namespace CelestialMod
                 {
                     CrimsonSeptette(progress);
                 }));
-				
-			tasks.Insert(gemsIndex +1, new PassLegacy("ImmortalSmoke", delegate (GenerationProgress progress)
-                {
-                    ImmortalSmoke(progress);
-                }));
 			
         }
 		
@@ -171,17 +166,7 @@ namespace CelestialMod
             delete.Place(origin, WorldGen.structures);
             biome.Place(origin, WorldGen.structures);
         }
-
-        private void ImmortalSmoke(GenerationProgress progress)
-        {
-            Point origin = new Point((int)(Main.maxTilesX * 055f), ((int)WorldGen.worldSurface - 10)); ;
-            progress.Message = "TEXT HERE!3";
-            ImmortalSmoke biome = new ImmortalSmoke();
-			biome.Place(origin, WorldGen.structures);
-        }
-
- 
-        
+		
 		public override void NetSend(BinaryWriter writer)
         {
             BitsByte flags = new BitsByte();

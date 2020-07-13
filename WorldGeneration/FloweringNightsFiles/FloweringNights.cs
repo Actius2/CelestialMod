@@ -5,7 +5,6 @@ using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ModLoader;
 using Terraria.World.Generation;
-using BaseMod;
 
 namespace CelestialMod.WorldGeneration
 {

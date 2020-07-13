@@ -2,7 +2,7 @@ author = Actius
 version = 0.001
 displayName = Celestial Mod
 homepage = 
-modReferences = BaseMod, SubworldLibrary
+modReferences = SubworldLibrary
 buildIgnore = .sln, .csproj, .user, bin/, obj/, Properties, .gitattributes, .gitignore, .git/, .vs/, changelog.txt, README.MD
 
 includeResources = false
