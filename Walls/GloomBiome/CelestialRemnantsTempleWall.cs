@@ -12,6 +12,7 @@ namespace CelestialMod.Walls.GloomBiome
             AddMapEntry(new Color(79, 140, 36));
             soundType = 21;
             dustType = 2;
+			drop = ModContent.ItemType<Items.Walls.CelestialRemnantsTempleWallBlock>();
         }
     }
 }
