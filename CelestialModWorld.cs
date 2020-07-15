@@ -1,9 +1,6 @@
 using System.IO;
 using System.Collections.Generic;
-using System.Linq;
 using Terraria;
-using Terraria.ID;
-using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.World.Generation;
 using Microsoft.Xna.Framework;
@@ -11,10 +8,8 @@ using Terraria.GameContent.Generation;
 using Terraria.ModLoader.IO;
 using Terraria.DataStructures;
 using Microsoft.Xna.Framework.Graphics;
-using CelestialMod;
-using CelestialMod.Tiles;
+using StructureHelper;
 using CelestialMod.WorldGeneration;
-using CelestialMod.Items;
 
 namespace CelestialMod
 {
@@ -94,9 +89,14 @@ namespace CelestialMod
                     FloweringNights(progress);
                 }));
 		
-			tasks.Insert(gemsIndex, new PassLegacy("CrimsonSeptette", delegate (GenerationProgress progress)
+			//tasks.Insert(gemsIndex, new PassLegacy("CrimsonSeptette", delegate (GenerationProgress progress)
+                //{
+                    //CrimsonSeptette(progress);
+                //}));
+			
+			tasks.Insert(gemsIndex + 1, new PassLegacy("BelovedTomboy", delegate (GenerationProgress progress)
                 {
-                    CrimsonSeptette(progress);
+                    BelovedTomboy(progress);
                 }));
 			
         }
@@ -166,6 +166,13 @@ namespace CelestialMod
             delete.Place(origin, WorldGen.structures);
             biome.Place(origin, WorldGen.structures);
         }
+		
+		private void BelovedTomboy(GenerationProgress progress)
+        {
+			progress.Message = "TEXT HERE!3";
+			StructureHelper.StructureHelper.GenerateStructure("Structures/CultTempleRuins", new Point16(2310, 125), CelestialMod.instance);
+
+		}
 		
 		public override void NetSend(BinaryWriter writer)
         {

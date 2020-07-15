@@ -47,9 +47,11 @@ namespace CelestialMod.Tiles.Furniture.GloomWood
 		}
 
 
-		public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b) {
+		public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)
+		{
 			Tile tile = Main.tile[i, j];
-			if (tile.frameX == 0) {
+			if (tile.frameX < 66)
+			{
 				// We can support different light colors for different styles here: switch (tile.frameY / 54)
 				r = 0.76f;
 				g = 1f;

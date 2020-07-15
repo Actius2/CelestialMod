@@ -4,7 +4,7 @@ displayName = Celestial Mod
 homepage = 
 modReferences = SubworldLibrary
 buildIgnore = .sln, .csproj, .user, bin/, obj/, Properties, .gitattributes, .gitignore, .git/, .vs/, changelog.txt, README.MD
-
+dllReferences = StructureHelper_v0.1.8
 includeResources = false
 includeCode = true
 includeSource = true

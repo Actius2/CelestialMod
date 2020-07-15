@@ -32,12 +32,12 @@ namespace CelestialMod.Items.Placeable.Furniture.GloomWood2
 
 		public override void HoldItem(Player player) {
 			Vector2 position = player.RotatedRelativePoint(new Vector2(player.itemLocation.X + 12f * player.direction + player.velocity.X, player.itemLocation.Y - 14f + player.velocity.Y), true);
-			Lighting.AddLight(position, 1f, 1f, 1f);
+			Lighting.AddLight(position, 0.76f, 1f, 0f);
 		}
 
 		public override void PostUpdate() {
 			if (!item.wet) {
-				Lighting.AddLight((int)((item.position.X + item.width / 2) / 16f), (int)((item.position.Y + item.height / 2) / 16f), 1f, 1f, 1f);
+				Lighting.AddLight((int)((item.position.X + item.width / 2) / 16f), (int)((item.position.Y + item.height / 2) / 16f), 0.76f, 1f, 0f);
 			}
 		}
 
